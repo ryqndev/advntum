@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/advntum/static/css/main.5f361e03.chunk.css",
+    "main.js": "/advntum/static/js/main.cef8872c.chunk.js",
+    "main.js.map": "/advntum/static/js/main.cef8872c.chunk.js.map",
+    "runtime-main.js": "/advntum/static/js/runtime-main.7b31da7c.js",
+    "runtime-main.js.map": "/advntum/static/js/runtime-main.7b31da7c.js.map",
+    "static/js/2.7398199b.chunk.js": "/advntum/static/js/2.7398199b.chunk.js",
+    "static/js/2.7398199b.chunk.js.map": "/advntum/static/js/2.7398199b.chunk.js.map",
+    "index.html": "/advntum/index.html",
+    "precache-manifest.ecfd19f717292659c3b582ec575a2f61.js": "/advntum/precache-manifest.ecfd19f717292659c3b582ec575a2f61.js",
+    "service-worker.js": "/advntum/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/advntum/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.7398199b.chunk.js.LICENSE.txt": "/advntum/static/js/2.7398199b.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/advntum/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7b31da7c.js",
+    "static/js/2.7398199b.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.cef8872c.chunk.js"
+  ]
+}
