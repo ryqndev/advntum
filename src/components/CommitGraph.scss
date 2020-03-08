@@ -1,0 +1,22 @@
+.commit-graph-wrapper{
+    & .controls{
+        max-width: 400px;
+        margin: 20px auto;
+
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        height: 30px;
+        font-size: 1.5rem;
+        
+        & button{
+            border: 1px solid white;
+            background-color: transparent;
+            color: white;
+            border-radius: 4px;
+            font-size: 1rem;
+            padding-bottom: 3px;
+            width: 40px;
+            margin: 0 auto;
+        }
+    }
+}

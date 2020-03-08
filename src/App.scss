@@ -1,0 +1,24 @@
+.App {
+  text-align: center;
+}
+
+.login-wrapper{
+  font-size: 2.5rem;
+  max-width: 700px;
+  margin: 50px auto;
+  text-align: center;
+  & button{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+    border-radius: 4px;
+    font-size: 1.6rem;
+    padding: 20px;
+    // margin: 50px auto;
+    margin: 50px;
+    &:hover{
+      border-color: #ff00ff;
+      transition: border-color 350ms;
+    }
+  }
+}
