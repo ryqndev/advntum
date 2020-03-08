@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/advntum/static/css/main.e5492542.chunk.css",
-    "main.js": "/advntum/static/js/main.8e09761f.chunk.js",
-    "main.js.map": "/advntum/static/js/main.8e09761f.chunk.js.map",
+    "main.js": "/advntum/static/js/main.ae394c3a.chunk.js",
+    "main.js.map": "/advntum/static/js/main.ae394c3a.chunk.js.map",
     "runtime-main.js": "/advntum/static/js/runtime-main.7b31da7c.js",
     "runtime-main.js.map": "/advntum/static/js/runtime-main.7b31da7c.js.map",
     "static/css/2.5a2f7233.chunk.css": "/advntum/static/css/2.5a2f7233.chunk.css",
-    "static/js/2.8af69de8.chunk.js": "/advntum/static/js/2.8af69de8.chunk.js",
-    "static/js/2.8af69de8.chunk.js.map": "/advntum/static/js/2.8af69de8.chunk.js.map",
+    "static/js/2.095e0a0a.chunk.js": "/advntum/static/js/2.095e0a0a.chunk.js",
+    "static/js/2.095e0a0a.chunk.js.map": "/advntum/static/js/2.095e0a0a.chunk.js.map",
     "index.html": "/advntum/index.html",
-    "precache-manifest.2ce8251decf687b0a3fffd3adccc5a99.js": "/advntum/precache-manifest.2ce8251decf687b0a3fffd3adccc5a99.js",
+    "precache-manifest.f9b1438fac0f5f1b2a868c9c3cb9cf12.js": "/advntum/precache-manifest.f9b1438fac0f5f1b2a868c9c3cb9cf12.js",
     "service-worker.js": "/advntum/service-worker.js",
     "static/css/2.5a2f7233.chunk.css.map": "/advntum/static/css/2.5a2f7233.chunk.css.map",
     "static/css/main.e5492542.chunk.css.map": "/advntum/static/css/main.e5492542.chunk.css.map",
-    "static/js/2.8af69de8.chunk.js.LICENSE.txt": "/advntum/static/js/2.8af69de8.chunk.js.LICENSE.txt"
+    "static/js/2.095e0a0a.chunk.js.LICENSE.txt": "/advntum/static/js/2.095e0a0a.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7b31da7c.js",
     "static/css/2.5a2f7233.chunk.css",
-    "static/js/2.8af69de8.chunk.js",
+    "static/js/2.095e0a0a.chunk.js",
     "static/css/main.e5492542.chunk.css",
-    "static/js/main.8e09761f.chunk.js"
+    "static/js/main.ae394c3a.chunk.js"
   ]
 }
