@@ -7,6 +7,7 @@ import { MemoryRouter as Router, Route, Switch, withRouter } from 'react-router-
 import {promptUser, getMeta, getData, aggregateCommits} from './fetchScripts';
 import ExampleMetaData from './datasets/bobaMeta.json'; //https://api.github.com/repos/ryqndev/boba-watch
 import GitHubLogin from 'react-github-login';
+import Swal from 'sweetalert2';
 import './App.scss';
 import 'react-vis/dist/style.css';
 
@@ -31,6 +32,11 @@ const App = ({history}) => {
 			setMeta(res);
 			getData(url, token, res => {
 				console.log("asking for new data")
+				Swal.fire(
+					'Wait for it...!',
+					'Getting all the commits takes time. Once the data is loaded, you will be redirected',
+					'success'
+				);
 				aggregateCommits(res, token, setData);
 			});
 		})
