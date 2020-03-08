@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fe0320ab8d511bf20101a275e52cfee0",
+    "revision": "a883e024a7cdf9f2a180882b4623007a",
     "url": "/advntum/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/advntum/static/css/2.5a2f7233.chunk.css"
   },
   {
-    "revision": "c93645cbcb1931b1ee30",
+    "revision": "d426015fcfad3e9c36a8",
     "url": "/advntum/static/css/main.e5492542.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/advntum/static/js/2.8af69de8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c93645cbcb1931b1ee30",
-    "url": "/advntum/static/js/main.6e4076f3.chunk.js"
+    "revision": "d426015fcfad3e9c36a8",
+    "url": "/advntum/static/js/main.8e09761f.chunk.js"
   },
   {
     "revision": "f8b8dad67ac3e84642ed",
