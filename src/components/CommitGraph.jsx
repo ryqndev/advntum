@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { XYPlot, XAxis, YAxis, HexbinSeries, ChartLabel } from 'react-vis';
 import './CommitGraph.scss';
-import 'react-vis/dist/style.css';
 
 const CommitGraph = ({DATA}) => {
 	const DIMENSIONS = [
@@ -11,14 +10,11 @@ const CommitGraph = ({DATA}) => {
 	];
 	const [xAxis, setXAxis] = useState(0);
 	const [yAxis, setYAxis] = useState(1);
-	const swapAxes = () => {
-		updateX(true);
-	}
 	const updateX = (increment) => {
 		setXAxis((xAxis + (increment ? 1 : -1)) % DIMENSIONS.length);
 	}
 	const updateY = (increment) => {
-		setXAxis((yAxis + (increment ? 1 : -1)) % DIMENSIONS.length);
+		setYAxis((yAxis + (increment ? 1 : -1)) % DIMENSIONS.length);
 	}
 	const data = DATA.map(d => ({
 		x: Number(d[DIMENSIONS[xAxis]]),
@@ -40,7 +36,7 @@ const CommitGraph = ({DATA}) => {
 			<XYPlot
 				width={window.innerWidth - 80}
 				height={500}
-				margin={50}
+				margin={30}
 			>
 				<HexbinSeries
 					animation

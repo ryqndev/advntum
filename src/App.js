@@ -1,11 +1,14 @@
 import React, {useState, useEffect} from 'react';
 import CommitGraph from './components/CommitGraph';
+import CommitterGraph from './components/CommitterGraph';
+import Committer from './components/Committer';
 import ExampleData from './datasets/boba.json';
 import { MemoryRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
 import {promptUser, getMeta, getData, aggregateCommits} from './fetchScripts';
 import ExampleMetaData from './datasets/bobaMeta.json'; //https://api.github.com/repos/ryqndev/boba-watch
 import GitHubLogin from 'react-github-login';
 import './App.scss';
+import 'react-vis/dist/style.css';
 
 const App = ({history}) => {
 	const [meta, setMeta] = useState(ExampleMetaData);
@@ -76,10 +79,27 @@ const Login = ({setToken}) => {
 }
 
 const Project = ({METADATA, DATA}) => {
+	const parse = (data) => {
+		return data.reduce((acc, val) => {
+			if(val.stats.total > 300) return acc;
+			return [...acc, {...val.stats, date: new Date(val.commit.author.date), name: val.commit.author.name}];
+		}, []);
+	}
+	const [parsedData, setParsedData] = useState(parse(DATA));
+
+	useEffect(() => {
+		setParsedData(parse(DATA));
+	}, [DATA]);
+
 	return (
 		<div className="App">
-			<h1>{METADATA.name} project info</h1>
-			<CommitGraph DATA={DATA}/>
+			<h1>{METADATA.name} project stats</h1>
+			<h2>{METADATA.name} commit info</h2>
+			<CommitGraph DATA={parsedData}/>
+			<h2>{METADATA.name} committer info</h2>
+			<CommitterGraph DATA={parsedData}/>
+			<h2>{METADATA.name} committer info</h2>
+			<Committer DATA={parsedData}/>
 		</div>
 	)
 }

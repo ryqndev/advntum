@@ -47,7 +47,7 @@ const getData = (url, code, callback) => {
         redirect: 'follow'
     };
 
-    fetch(url + "/commits?per_page=100", requestOptions)
+    fetch(url + "/commits?per_page=60", requestOptions)
     .then(response => response.json())
     .then(result => callback(result))
     .catch(error => console.log('error at data', error));
@@ -71,8 +71,8 @@ const aggregateCommits = async(res, code, setData) => {
 
     // console.log(res[0].url);
     // let commits = await fetch(res[0].url, requestOptions).then(res => res.json());
-    console.log(commits);
-    setData([commits]);
+    console.log("new commits", commits);
+    setData(commits);
 }
 
 export {
