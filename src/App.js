@@ -2,17 +2,15 @@ import React, {useState, useEffect} from 'react';
 import CommitGraph from './components/CommitGraph';
 import ExampleData from './datasets/boba.json';
 import { MemoryRouter as Router, Route, Switch, withRouter } from 'react-router-dom';
-import {promptUser, getMeta} from './fetchScripts';
+import {promptUser, getMeta, getData, aggregateCommits} from './fetchScripts';
 import ExampleMetaData from './datasets/bobaMeta.json'; //https://api.github.com/repos/ryqndev/boba-watch
 import GitHubLogin from 'react-github-login';
 import './App.scss';
 
-// const url = "https://api.github.com/repos/{owner}/{repo}";
-const url = "https://api.github.com/repos/ryqndev/boba-watch";
-
 const App = ({history}) => {
 	const [meta, setMeta] = useState(ExampleMetaData);
 	const [data, setData] = useState(ExampleData);
+	const [url, setUrl] = useState(null);
 	const [token, setToken] = useState(null);
 	
 	useEffect(() => {
@@ -20,14 +18,32 @@ const App = ({history}) => {
 		if(token === 0){
 			history.push('/app');
 		}else if(token !== null){
-			promptUser();
-			getMeta(url, token, (res) => {
-				setMeta(res);
-
-				history.push('/app');
-			})
+			promptUser(setUrl);
 		}
 	}, [token, history]);
+
+	useEffect(() => {
+		console.log('url added', url);
+		getMeta(url, token, res => {
+			setMeta(res);
+			getData(url, token, res => {
+				console.log("asking for new data")
+				aggregateCommits(res, token, setData);
+			});
+		})
+	}, [url, token, history]);
+
+	useEffect(() => {
+		console.log('meta updated', meta);
+	}, [meta])
+
+	useEffect(() => {
+		console.log('data added', data);
+		if(data !== ExampleData){
+			history.push('/app');
+		}
+	}, [data, url, history]);
+
 	return (
 		<Switch>
 			<Route exact path='/'>
